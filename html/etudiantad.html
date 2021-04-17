@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="../css/bootstrap.css">
+     <link rel="stylesheet" href="../css/Untitled-1.css">
+    <title>Document</title>
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-blockquote-left" viewBox="0 0 16 16">
+      <path d="M2.5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm5 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm0 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm-5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm.79-5.373c.112-.078.26-.17.444-.275L3.524 6c-.122.074-.272.17-.452.287-.18.117-.35.26-.51.428a2.425 2.425 0 0 0-.398.562c-.11.207-.164.438-.164.692 0 .36.072.65.217.873.144.219.385.328.72.328.215 0 .383-.07.504-.211a.697.697 0 0 0 .188-.463c0-.23-.07-.404-.211-.521-.137-.121-.326-.182-.568-.182h-.282c.024-.203.065-.37.123-.498a1.38 1.38 0 0 1 .252-.37 1.94 1.94 0 0 1 .346-.298zm2.167 0c.113-.078.262-.17.445-.275L5.692 6c-.122.074-.272.17-.452.287-.18.117-.35.26-.51.428a2.425 2.425 0 0 0-.398.562c-.11.207-.164.438-.164.692 0 .36.072.65.217.873.144.219.385.328.72.328.215 0 .383-.07.504-.211a.697.697 0 0 0 .188-.463c0-.23-.07-.404-.211-.521-.137-.121-.326-.182-.568-.182h-.282a1.75 1.75 0 0 1 .118-.492c.058-.13.144-.254.257-.375a1.94 1.94 0 0 1 .346-.3z"/>
+      </svg>
+    </label>
+   <ul class="nav ">
+    <li class="nav-item"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/admin.html">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/universitead.html">Université</a></li>
+    <li class="nav-item"><a class="nav-link active" href="file:///C:/Users/idoud/Desktop/premier/html/etudiantad.html">Etudiants</a></li>
+     <li class="nav-item dec"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/Untitled-1.html">Déconnexion</a></li>
+
+   </ul>
+  </nav>
+    <!-- <div class="container-fluid" id='compte'>
+        <div class="row">
+          <div class="col-10">
+            <ul class="nav">
+              <li class="nav-item"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/admin.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/universitead.html">Université</a></li>
+              <li class="nav-item"><a class="nav-link active" href="file:///C:/Users/idoud/Desktop/premier/html/etudiantad.html">Etudiants</a></li>
+            </ul>
+          </div>
+          <div class="col-2">
+            <ul class="nav">
+              <li class="nav-item"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/Untitled-1.html">Déconnexion</a></li>
+            </ul>
+          </div>
+        </div>
+      </div> -->
+ 
+      <p id="etudiantexiste"></p>
+      <table id="tab" class="mt-5 ml-4">
+        <thead>
+            <td></td>
+            <td>Nom</td>
+            <td>Prénom</td>
+            <td>Date de naissance</td>
+            <td>Adresse mail</td>
+            <td>Genre</td>
+            <td>Mot de passe</td>
+          </thead>
+        
+      </table>
+      <div id="etudiant2">
+        <div class="container">
+          <div class="row justify-content-center ">
+             <div class="univ">
+               <form class="form-inline">
+                 <div class="form-group mb-2 mr-4">
+                   <input type="text" class="form-control" id="nom" placeholder="Nom">
+                 </div>
+                 <div class="form-group mx-sm-3 mb-2">
+                   <input type="text" class="form-control" id="prénom" placeholder="Prénom" >
+                 </div>
+               </form>  
+               <div class="form-group">
+                 <input type="email" class="form-control" id="address" disabled placeholder="Adresse mail">
+                 <small id="validadd1"></small>
+               </div>
+               <div class="form-group d-flex">
+                 <input type="password" class="form-control" id="mot" onblur="pass()" placeholder="Mot de passe"> 
+               </div>
+               <p id="valide2"></p>
+               <p>Date de naissance :</p>
+               <div class="form-group">
+                 <input type="date" id="date">
+               </div>  
+               <p>Genre : </p> 
+               <div class="input-group">
+                 <div class="form-check form-check-inline">
+                   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genre" value="femme">
+                   <label class="form-check-label" for="inlineRadio1">Femme</label>
+                 </div>
+                 <div class="form-check form-check-inline">
+                   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genre1" value="homme">
+                  <label class="form-check-label" for="inlineRadio2">Homme</label>
+                 </div>
+               </div>
+               <div class="form-group">
+                 <h5>listes des établissements :</h5>
+                 <select class="form-control" id="optionn" disabled>
+                   <option id="choix"></option>
+                 </select>
+               </div>
+            <div class="row justify-content-center">
+              <button type="button" class="but mt-2" onclick="sauvgarde()">Sauvgarde</button> 
+             </div> 
+             </div>
+          </div>
+        </div>
+      </div>
+      <script src="../etudiantad.js"></script>
+</body>
+</html>

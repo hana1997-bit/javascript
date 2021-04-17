@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="../css/bootstrap.css">
+   <link rel="stylesheet" href="../css/Untitled-1.css">
+    <title>Document</title> 
+</head>
+<body >
+  <div class="row justify-content-center mb-3"><h1>Inscription</h1></div>
+   
+   <!-- button radio -->
+   <div class="row justify-content-center choixx">
+     <input type="radio" name="post" value="ecole" checked id="ecole" onclick="toggleBoxVisibility(this.value)"><label for="ecole" id="univv" class="mr-3">Ecole</label>
+     <input type="radio" name="post" value="student"  id="etudiant" onclick="toggleBoxVisibility(this.value)"><label for="etudiant" id="stud" class="mr-3">Etudiant</label>
+     <input type="radio" name="post" value="admin" id="admin" onclick="toggleBoxVisibility(this.value)"><label for="admin" id="ad">Admin</label> 
+   </div>
+   <div class="container" id="univ" >
+     <div class="row justify-content-center">
+       <div  class="univ mt-4">
+         <table>
+            <tr>
+              <td><label for="nomecole">Nom de l'école : </label></td>
+              <td><input class="form-control" type="text" id="nomecole" ></td>
+            </tr>
+            <tr>
+              <td><label for="nom-add">Adresse : </label></td>
+              <td><input type="text" id="nom-add" class="form-control"  ></td>
+            </tr>
+            <tr>
+              <td><label for="phone">Numéro de téléphone : </label></td>
+              <td><input type="tel" id="phone" class="form-control"  maxlength="8" onblur="validepho()"></td>
+              <td ><p id="phonevalid"></p></td>
+            </tr>
+            <tr>
+              <td><label for="site">Adresse mail : </label></td>
+              <td><input type="text" id="site" class="form-control" onblur="validadd()"></td>
+              <td ><p id="sitevalid"></p></td>
+            </tr>
+            <tr>
+              <td><label for="nom-mot">Mot de passe : </label></td>
+              <td><input type="password" id="nom-mot" class="form-control" onkeydown="passe()" ></td>
+              <td>
+                 <button class="aff" onclick="affiche()"><svg xmlns="http://www.w3.org/2000/svg"  width="20" height="16" class="mt-1" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                  <path  d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                 </svg></button>
+              </td>
+              <td><span id="textpass"></span></td>
+            </tr>
+         </table>
+         <div class="row justify-content-center">
+           <button onclick="inscrit()"  class="but mt-2">Inscription</button>
+          </div>
+       </div>  
+     </div>
+      
+    </div>
+    
+    <p id="disabl"></p>
+   <div id="etudiant1">
+     <div class="container">
+       <div class="row justify-content-center ">
+          <div class="univ">
+            <form class="form-inline">
+              <div class="form-group mb-2 mr-4">
+                <input type="text" class="form-control" id="nom" placeholder="Nom">
+              </div>
+              <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" id="prénom" placeholder="Prénom" >
+              </div>
+            </form>  
+            <div class="form-group">
+              <input type="email" class="form-control" id="address" onblur="validadd1()" placeholder="Adresse mail">
+              <small id="validadd1"></small>
+            </div>
+            <div class="form-group d-flex">
+              <input type="password" class="form-control" id="mot" placeholder="Mot de passe" onkeydown="pass()">
+              <button class="aff" onclick="affiche()"><svg xmlns="http://www.w3.org/2000/svg"  width="20" height="16" class="mt-1" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                <path  d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+               </svg></button>
+            </div>
+            <p id="valide2"></p>
+            <div class="form-group d-flex">
+              <input type="password" class="form-control" onblur="validpass()" id="mot1" placeholder="Confirmé le mot de passe">
+            </div>
+            <p id="valide"></p>
+            <p>Date de naissance :</p>
+            <div class="form-group">
+              <input type="date" id="date">
+            </div>  
+            <p>Genre : </p> 
+            <div class="input-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genre" value="femme">
+                <label class="form-check-label" for="inlineRadio1">Femme</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genre1" value="homme">
+               <label class="form-check-label" for="inlineRadio2">Homme</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <h5>listes des établissements :</h5>
+              <select class="form-control" id="optionn">
+                
+              </select>
+            </div>
+         <div class="row justify-content-center">
+           <button type="button" class="but mt-2" onclick="inscription()">Inscription</button> 
+          </div> 
+          </div>
+       </div>
+     </div>
+   </div>
+    <div id="admin1">
+      <div class="row justify-content-center mt-4">
+        <div id="adminverif" >
+         <label for="adminpass">Entrez le code : </label>
+         <input type="password" id="adminpass">
+         <input type="button" class="but1" value="inscrit" onclick="verifier()">
+       </div>
+     </div>
+     <div class="container" id="adminins" >
+      <div class="row justify-content-center">
+        <div  class="univ mt-4">
+          <table>
+            <tr>
+              <td><label for="nomad">Nom : </label></td>
+             <td><input class="form-control" type="text" id="nomad"></td>
+            </tr>
+            <tr>
+              <td><label for="prenomad">Prénom : </label></td>
+              <td><input class="form-control" type="text" id="prenomad"></td>
+            </tr>
+            <tr>
+              <td><label for="phonead">Numéro de téléphone : </label></td>
+              <td><input type="tel" id="phonead" class="form-control" onblur="validephad()" maxlength="8"></td>
+              <td><p id="validphad"></p></td>
+            </tr>
+            <tr>
+              <td><label for="age">Date de naissance : </label></td>
+              <td><input type="date" id="age" class="form-control"></td>
+            </tr>
+            <tr>
+              <td><label for="mailad">Adresse mail : </label></td>
+              <td><input type="text" id="mailad" class="form-control" onblur="validadd2()"></td>
+              <td ><p id="mailvalide"></p></td>
+            </tr>
+            <tr>
+              <td><label for="passad">Mot de passe : </label></td>
+              <td><input type="password" id="passad" class="form-control" onkeydown="passadd()"></td>
+              <td> <p id='passadmin'></p></td>
+              <td>
+                <button class="aff" onclick="affiche()"><svg xmlns="http://www.w3.org/2000/svg"  width="20" height="16" class="mt-1" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                 <path  d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                 <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                </svg></button>
+             </td>
+            </tr>
+          </table>
+          <div class="row justify-content-center">
+            <button onclick="connect()" class="mt-2">Inscrition</button>
+          </div>
+        </div>  
+      </div>
+
+    </div>
+   
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="../bootstrap.js"></script>
+  <script src="../index.js"></script> 
+</body>
+
+</html>
+
+
+
+

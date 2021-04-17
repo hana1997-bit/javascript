@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="../css/bootstrap.css">
+     <link rel="stylesheet" href="../css/Untitled-1.css">
+    <title>Document</title>
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-blockquote-left" viewBox="0 0 16 16">
+      <path d="M2.5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm5 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm0 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm-5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm.79-5.373c.112-.078.26-.17.444-.275L3.524 6c-.122.074-.272.17-.452.287-.18.117-.35.26-.51.428a2.425 2.425 0 0 0-.398.562c-.11.207-.164.438-.164.692 0 .36.072.65.217.873.144.219.385.328.72.328.215 0 .383-.07.504-.211a.697.697 0 0 0 .188-.463c0-.23-.07-.404-.211-.521-.137-.121-.326-.182-.568-.182h-.282c.024-.203.065-.37.123-.498a1.38 1.38 0 0 1 .252-.37 1.94 1.94 0 0 1 .346-.298zm2.167 0c.113-.078.262-.17.445-.275L5.692 6c-.122.074-.272.17-.452.287-.18.117-.35.26-.51.428a2.425 2.425 0 0 0-.398.562c-.11.207-.164.438-.164.692 0 .36.072.65.217.873.144.219.385.328.72.328.215 0 .383-.07.504-.211a.697.697 0 0 0 .188-.463c0-.23-.07-.404-.211-.521-.137-.121-.326-.182-.568-.182h-.282a1.75 1.75 0 0 1 .118-.492c.058-.13.144-.254.257-.375a1.94 1.94 0 0 1 .346-.3z"/>
+      </svg>
+    </label>
+   <ul class="nav ">
+    <li class="nav-item"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/admin.html">Home</a></li>
+    <li class="nav-item"><a class="nav-link active" href="file:///C:/Users/idoud/Desktop/premier/html/universitead.html">Université</a></li>
+    <li class="nav-item"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/etudiantad.html">Etudiants</a></li>
+     <li class="nav-item dec"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/Untitled-1.html">Déconnexion</a></li>
+
+   </ul>
+  </nav>
+    <!-- <div class="container-fluid" id='compte'>
+        <div class="row">
+          <div class="col-10">
+            <ul class="nav">
+              <li class="nav-item"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/admin.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" href="file:///C:/Users/idoud/Desktop/premier/html/universitead.html">Université</a></li>
+              <li class="nav-item"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/etudiantad.html">Etudiants</a></li>
+            </ul>
+          </div>
+          <div class="col-2">
+            <ul class="nav">
+              <li class="nav-item"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/Untitled-1.html">Déconnexion</a></li>
+            </ul>
+          </div>
+        </div>
+      </div> -->
+ 
+      <table id="tab" class="mt-5 ml-4">
+        <thead>
+          <td></td>
+          <td>Nom </td>
+          <td>adresse</td>
+          <td>Numéro de téléphone</td>
+          <td>Adresse mail</td>
+          <td>Mot de passe</td>
+        </thead>
+        
+      </table>
+      <div class="container" id="univ" >
+        <div class="row justify-content-center">
+          <div  class="univ mt-4">
+            <table>
+               <tr>
+                 <td><label for="nomecole">Nom de l'école : </label></td>
+                 <td><input class="form-control" type="text" id="nomecole" disabled></td>
+               </tr>
+               <tr>
+                 <td><label for="nom-add">Adresse : </label></td>
+                 <td><input type="text" id="nom-add" class="form-control"  ></td>
+               </tr>
+               <tr>
+                 <td><label for="phone">Numéro de téléphone : </label></td>
+                 <td><input type="tel" id="phone" class="form-control"  maxlength="8" onblur="validepho()"></td>
+                 <td ><p id="phonevalid"></p></td>
+               </tr>
+               <tr>
+                 <td><label for="site">Adresse mail : </label></td>
+                 <td><input type="text" id="site" class="form-control" disabled></td>
+               </tr>
+               <tr>
+                 <td><label for="nom-mot">Mot de passe : </label></td>
+                 <td><input type="password" id="nom-mot" class="form-control" onblur="passe()" ></td>
+                 <td><p id="textpass"></p></td>
+               </tr>
+            </table>
+            <div class="row justify-content-center">
+              <button onclick="sauv()"  class="but mt-2">Sauvgarde</button>
+             </div>
+          </div>  
+        </div>
+         
+       </div>
+      <script src="../universitead.js"></script>
+</body>
+</html>

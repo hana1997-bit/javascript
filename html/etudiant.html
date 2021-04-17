@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="../css/bootstrap.css">
+     <link rel="stylesheet" href="../css/Untitled-1.css">
+    <title>Document</title>
+ </head>
+ <body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-blockquote-left" viewBox="0 0 16 16">
+      <path d="M2.5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm5 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm0 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm-5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm.79-5.373c.112-.078.26-.17.444-.275L3.524 6c-.122.074-.272.17-.452.287-.18.117-.35.26-.51.428a2.425 2.425 0 0 0-.398.562c-.11.207-.164.438-.164.692 0 .36.072.65.217.873.144.219.385.328.72.328.215 0 .383-.07.504-.211a.697.697 0 0 0 .188-.463c0-.23-.07-.404-.211-.521-.137-.121-.326-.182-.568-.182h-.282c.024-.203.065-.37.123-.498a1.38 1.38 0 0 1 .252-.37 1.94 1.94 0 0 1 .346-.298zm2.167 0c.113-.078.262-.17.445-.275L5.692 6c-.122.074-.272.17-.452.287-.18.117-.35.26-.51.428a2.425 2.425 0 0 0-.398.562c-.11.207-.164.438-.164.692 0 .36.072.65.217.873.144.219.385.328.72.328.215 0 .383-.07.504-.211a.697.697 0 0 0 .188-.463c0-.23-.07-.404-.211-.521-.137-.121-.326-.182-.568-.182h-.282a1.75 1.75 0 0 1 .118-.492c.058-.13.144-.254.257-.375a1.94 1.94 0 0 1 .346-.3z"/>
+      </svg>
+    </label>
+   <ul class="nav ">
+     <li class="nav-item"><a class="nav-link active" href="file:///C:/Users/idoud/Desktop/premier/html/etudiant.html">Home</a></li>
+     <li class="nav-item dex"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/universit%C3%A9.html">Université</a></li>
+     <li class="nav-item dec"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/Untitled-1.html">Déconnexion</a></li>
+
+   </ul>
+  </nav>
+    <!-- <div class="container-fluid" id='compte'>
+      <div class="row">
+        <div class="col-10">
+          <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/etudiant.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/universit%C3%A9.html">Université</a></li>
+          </ul>
+        </div>
+        <div class="col-2">
+          <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="file:///C:/Users/idoud/Desktop/premier/html/Untitled-1.html">Déconnexion</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>   -->
+    <div class="row justify-content-center mt-5" id="home1">
+      <h1 id="bien"></h1>
+    </div>
+   <div class="container-fluid">
+     <div class="row">
+       <div class="col">
+          <div id="my">
+            <h5 class="mt-5"> Votre compte : </h5>
+           <table>
+              <tr>
+                <td>Nom : </td>
+               <td id="nom"></td>
+              </tr>
+             <tr>
+               <td>Prénom : </td>
+               <td id="prenom"></td>
+             </tr>
+            <tr>
+              <td>Adresse mail : </td>
+              <td id="mail"></td>
+            </tr>
+            <tr>
+              <td>Mot de passe : </td>
+              <td id="pass"></td>
+           </tr>
+            <tr>
+              <td>Genre: </td>
+              <td id="genre"></td>
+           </tr>
+           <tr>
+             <td>Date de naissance: </td>
+             <td id="date"></td>
+          </tr>
+          <tr>
+             <td>Etablissement: </td>
+             <td id="etat"></td>
+          </tr>
+         </table>
+         <button onclick="modifier()" class="mt-3">Modifier</button>
+       </div>
+     </div>
+   </div>
+   </div>
+   <div id="etudiant1">
+    <div class="container">
+      <div class="row justify-content-center ">
+         <div class="univ">
+           <form class="form-inline">
+             <div class="form-group mb-2 mr-4">
+               <input type="text" class="form-control" id="nomm" placeholder="Nom">
+             </div>
+             <div class="form-group mx-sm-3 mb-2">
+               <input type="text" class="form-control" id="prénom" placeholder="Prénom" >
+             </div>
+           </form>  
+           <div class="form-group">
+             <input type="email" class="form-control" id="address" onblur="validadd1()" placeholder="Adresse mail">
+             <small id="validadd1"></small>
+           </div>
+           <div class="form-group d-flex">
+             <input type="password" class="form-control" id="mot" placeholder="Mot de passe" onkeydown="pass()">
+            </div>
+           <p id="valide2"></p>
+           <div class="form-group d-flex">
+             <input type="password" class="form-control" onblur="validpass()" id="mot1" placeholder="Confirmé le mot de passe">
+           </div>
+           <p id="valide"></p>
+           <p>Date de naissance :</p>
+           <div class="form-group">
+             <input type="date" id="datee">
+           </div>  
+           <p>Genre : </p> 
+           <div class="input-group">
+             <div class="form-check form-check-inline">
+               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genree" value="femme">
+               <label class="form-check-label" for="inlineRadio1">Femme</label>
+             </div>
+             <div class="form-check form-check-inline">
+               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genre11" value="homme">
+              <label class="form-check-label" for="inlineRadio2">Homme</label>
+             </div>
+           </div>
+           <div class="form-group">
+             <h5>listes des établissements :</h5>
+             <select class="form-control" id="optionn">
+                <option id="choix"></option>
+             </select>
+           </div>
+        <div class="row justify-content-center">
+          <button type="button" class="but mt-2" onclick="sauvgarder()">Sauvgarde</button> 
+         </div> 
+         </div>
+      </div>
+    </div>
+  </div>
+   <script src="../etudiant.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../bootstrap.js"></script>
+ </body>
+</html>

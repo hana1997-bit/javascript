@@ -1,0 +1,206 @@
+body{
+    background-image: url("../images/Capture1.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    color: rgba(128, 175, 170,0.5);
+}
+nav{
+    background-color: rgba(241, 228, 241, 0.4);
+    color: white;
+    height: 80px;
+    margin-top: -10px;
+}
+a{
+    color:rgba(153, 111, 135, 0.9)  ;
+    font-weight: bold;
+}
+ a:hover{
+    color:rgba(182, 140, 182, 0.9) !important;
+
+}
+a.active {
+    color:rgba(182, 140, 182, 0.9) !important;
+    text-decoration: underline;
+
+}
+#ecole  {
+    display: none;
+}
+#etudiant  {
+    display: none;
+}
+#admin {
+    display: none;
+}
+#ecole  {
+    display: none;
+}
+#univv {
+    border: 1px solid rgba(241, 228, 241, 0.822);
+    border-radius: 5px;
+    padding-inline: 60px;
+    background-color: rgba(128, 175, 170,0.5);
+
+}
+#stud{
+    border: 1px solid rgba(241, 228, 241, 0.822);
+    border-radius: 5px;
+    padding-inline: 60px;
+    background-color: rgba(128, 175, 170,0.5);
+}
+#ad{
+    border: 1px solid rgba(241, 228, 241, 0.822);
+    border-radius: 5px;
+    padding-inline: 60px;
+    background-color: rgba(128, 175, 170,0.5);
+}
+#etudiant1{
+    display: none;
+    
+}
+#admin1{
+    display: none;
+}
+.part{
+    display: block !important;
+}
+.s{
+    display: none !important;
+}
+.univ{
+    position: relative;
+    background-color: rgba(175, 127, 127, 0.5);
+    border-radius: 50px ;
+    padding: 20px;
+    justify-content: center !important;
+}
+
+.aff{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: -40px;
+}
+.aff:hover{
+    border:none;
+}
+.but{
+    background-color: rgba(241, 228, 241, 0.822);
+    border: none;
+    padding-inline: 8px;
+}
+.but1{
+    background-color: rgba(168, 109, 143, 0.5);
+    border: none;
+    padding-inline: 20px;
+    border-radius: 5px;
+}
+thead td{
+    border: 1px solid black;
+    text-align: center;
+}
+#etudiant2{
+    display: none;
+    
+}
+
+nav ul{
+    display: inline;
+    margin-left: 20px;
+    margin-top: 0 ;
+}
+.dex{
+    position: relative;
+    margin-right: 400px;
+    
+}
+.dec{
+    position: relative;
+    margin-left: 400px;
+    
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    /* margin: 0 5px; */
+}
+nav ul li a{
+    font-size: 17px;
+    /* padding: 7px 13px; */
+
+}
+a:hover{
+    color: brown;
+}
+.checkbtn{
+    position: absolute;
+    font-size: 30px;
+    float: left !important;
+    line-height: normal !important;
+    display: none;
+    cursor: pointer;
+}
+#check{
+    display: none;
+
+}
+@media(max-width:1268px){
+    .dex{
+        position: relative;
+        margin-right: 300px;
+        
+    }
+    .dec{
+        position: relative;
+        margin-left: 300px;
+        
+    }
+}
+@media(max-width:1090px){
+    .dex{
+        position: relative;
+        margin-right: 0px;
+        
+    }
+    .dec{
+        position: relative;
+        margin-left: 0px;
+        
+    }
+    ul{
+        justify-content: center;
+    }
+    /* #tab{
+        width: 200px;
+    } */
+}
+
+@media(max-width:666px){
+    
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 30%;
+        height: 100%;
+        /* top: 80px; */
+        /* left: -80%; */
+        text-align: center;
+       transition: all 1s;
+       background-color: white;
+       z-index: 3;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+} 
