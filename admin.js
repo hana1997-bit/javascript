@@ -127,5 +127,5 @@ function sauvgarde() {
     
 }
 function sort() {
-    location.replace='file:///C:/Users/idoud/Desktop/premier/html/Untitled-1.html';
+    location.replace('file:///C:/Users/idoud/Desktop/premier/html/Untitled-1.html');
 }

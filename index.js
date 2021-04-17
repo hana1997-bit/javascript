@@ -171,7 +171,8 @@ function inscrit() {
        tabuniv.push(univs);
         localStorage.setItem('univs',JSON.stringify(tabuniv)); 
         alert('merci pour votre inscription');
-        location.reload();
+        location.href="file:///C:/Users/idoud/Desktop/premier/html/Untitled-1.html";
+
     }  
     else{
         alert("les champs doivent tout remplir et de forme valide");
@@ -301,7 +302,8 @@ console.log(document.getElementById('genre1').checked)
         tab.push(users);
         localStorage.setItem('users',JSON.stringify(tab));
         console.log(genre)
-         location.reload();
+        location.href="file:///C:/Users/idoud/Desktop/premier/html/Untitled-1.html";
+
     }
     else{
         alert("les champs doivent tout remplir et de forme valide");
@@ -401,7 +403,7 @@ function connect() {
     if (nomad.value!=""&&prenomad.value!=""&&ph==true&&age.value!=""&&mail==true&&pa==true) {
      tabad.push(admins);
      localStorage.setItem('admins',JSON.stringify(tabad)); 
-     location.reload();
+     location.href="file:///C:/Users/idoud/Desktop/premier/html/Untitled-1.html";
     }
     else{
         alert('!tout les chapms doivent etre remplit et de forme valide');
